@@ -168,3 +168,151 @@ class GenerateDivAdd{
     }
 }
 
+// P.NO -6 Program to print the ASCII Value of all alphabets
+
+class AsciiAlphabets{
+
+    static void printLargerAscii(){
+        for(char ch='A';ch<='Z';ch++){
+            System.out.println(ch+"-> "+(int)ch);
+        }
+    } 
+
+    static void printLowerAscii(){
+        for(char ch='a';ch<='z';ch++){
+            System.out.println(ch+"-> "+(int)ch);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("ASCII Value for (A-Z)");
+        printLargerAscii();
+        System.out.println("ASCII Value for (a-z)");
+        printLowerAscii();
+    }
+}
+
+// Using Array of Characters
+
+class AsciiAlphabets2{
+    public static void main(String[] args) {
+        char[] character=new char[52];
+        int index=0;
+
+        for(char ch='A';ch<='Z';ch++){
+            character[index++]=ch;
+        }
+
+        for(char ch='a';ch<='z';ch++){
+            character[index++]=ch;
+        }
+
+        for(char chars:character){
+            System.out.println(chars+"-> "+(int)chars);
+        }
+    }
+}
+
+// P.NO -7 Program to Compute Quotient and Remainder of a given number
+
+class findQuoAndRem{
+
+    static void findCalc(int dividend,int divisor){
+
+        if(dividend>0 && divisor>0){
+
+        int findQuotient=dividend/divisor;
+        int findRemainder=dividend%divisor;
+
+        System.out.println("Quotient of the Number: "+findQuotient);
+        System.out.println("Remainder of the Number: "+findRemainder);
+
+        }
+        else{
+            System.out.println("It can be Zero or Infinity");
+        }
+    }
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter a Dividend: ");
+        int dividend=sc.nextInt();
+
+        System.out.print("Enter a Divisor: ");
+        int divisor=sc.nextInt();
+
+        findCalc(dividend, divisor);
+    }
+}
+
+// P.NO -8 Program to demonstrate the Working of long and double
+
+class WorkingOfLongDouble{
+    public static void main(String[] args) {
+
+        long cashInBank=9999999999L;
+        double pi=3.142244343434343;
+        int radius=31;
+
+        System.out.println("Area of a Circle: "+(long)pi*radius*radius);
+        System.out.println("Cash in Bank: "+(int)cashInBank);
+    }
+}
+
+// P.NO 9 Program to Swap Two Numbers
+
+class SwapTwoNumbers{
+
+    static void swapNumbers(int a,int b){
+        int temp=a;
+        a=b;
+        b=temp;
+
+        System.out.println("After Swapping");
+
+        System.out.println("A is: "+a);
+        System.out.println("B is: "+b);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Before Swapping");
+
+        System.out.print("Enter A: ");
+        int a=sc.nextInt();
+
+        System.out.print("Enter B: ");
+        int b=sc.nextInt();
+
+        swapNumbers(a, b);
+    }
+}
+
+// P.NO 10 Program to check whether the number is even or not
+
+class EvenOrOdd{
+
+    static void checkEvenOrOdd(int number){
+        if(number<0){
+            System.out.println("We Can't Proceed further");
+        }
+
+        if(number%2==0){
+            System.out.println(number+" is a Even Number");
+        }
+        else{
+            System.out.println(number+" is a Odd Number");
+        }
+    }
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter a Number: ");
+        int number=sc.nextInt();
+
+        checkEvenOrOdd(number);
+    }
+}
