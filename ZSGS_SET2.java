@@ -303,3 +303,38 @@ class AreaBetweenCircles {
         findAreaBetweenCircles(R, r);
     }
 }
+
+
+// P-NO 19 Evaluate the program and understand the difference
+
+class EvaluateSums{
+
+    public static void main(String[] args) {
+
+        int a=5;
+        int b=8;
+
+        int result1= ++a - --b;
+        int result2= a-- % b++;
+        int result3= a*=b+=5;
+        int result4=69>>>2;
+
+        System.out.println("Value of a :"+a);
+        System.out.println("Value of b :"+b);
+        System.out.println("Result is: "+result1);
+        System.out.println("Result is: "+result2);
+        System.out.println("Result is: "+result3);
+        System.out.println("Result is: "+result4);
+
+    }
+}
+
+// P-NO 20 Evaluate the program and understand the difference 
+
+class EvaluateSums2{
+    public static void main(String[] args) {
+        int a=28;
+        a+=++a + ++a + -a + a--;
+        System.out.println("Answer is: "+a);
+    }
+}
