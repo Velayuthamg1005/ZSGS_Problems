@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ZSGS_SET2 {
     public static void main(String[] args) {
-        System.out.println("-----11 To 20 Problems");
+        System.out.println("-----11 To 20 Problems-----");
     }  
 }
 
@@ -338,3 +338,4 @@ class EvaluateSums2{
         System.out.println("Answer is: "+a);
     }
 }
+
