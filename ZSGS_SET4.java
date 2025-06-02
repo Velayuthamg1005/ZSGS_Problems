@@ -1,3 +1,6 @@
+import java.util.*;
+
+
 public class ZSGS_SET4 {
     public static void main(String[] args) {
         System.out.println("-----31 to 40 problems-----");
@@ -113,6 +116,32 @@ class CopyArray {
     }
 }
 
+// P-NO 36 Java program to find the frequency of each element in the array
+
+class FrequencyOfElement{
+    public static void main(String[] args) {
+        
+        int[] arr={1,2,4,5,5,2,1,4,5,3};
+        int n=arr.length;
+        boolean[] visited=new boolean[n];
+
+        for(int i=0;i<n;i++){
+            if(visited[i]){
+                continue;
+            }
+            int count=1;
+            for(int j=i+1;j<n;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                    visited[j]=true;
+                }
+            }
+            System.out.println(arr[i]+" -> "+count);
+        }
+        
+    }
+}
+
 // P-NO 37 Java program to reverse the elements of an array
 
 class ReverseArray {
@@ -131,5 +160,90 @@ class ReverseArray {
         for (int num : arr) {
             System.out.print(num + " ");
         }
+    }
+}
+
+// P-NO 38 Java program to print the delete an elements of an array
+
+class DeleteArray{
+    public static void main(String[] args) {
+
+        int[] arr={23,42,11,34,13};
+        int n=arr.length;
+
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Index have to delete: ");
+        int index=sc.nextInt();
+
+        int[] newArr=new int[n-1];
+
+        if(index<0 || index>=n){
+            System.out.println("We can't perform");
+        }
+
+        for(int i=0,j=0;i<n;i++){
+            if(i!=index){
+                newArr[j++]=arr[i];
+            }
+        }
+
+        System.out.println(Arrays.toString(newArr));
+    }
+}
+
+// P-NO 39 Java program to print the average of all items of the array
+
+class AverageArray{
+    public static void main(String[] args) {
+
+        int[] arr={2,34,54,22,13,44};
+        int n=arr.length;
+        int sum=0;
+
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+        }
+
+        double average=(double)sum/n; 
+        System.out.println("Average of all elements: "+average);
+    }
+}
+
+// P-NO 40 Java program to inverse the elements if an array
+
+class InverseArray{
+    public static void main(String[] args) {
+        
+        int[] arr={12,42,12,31,43};
+        int n=arr.length;
+
+        int start=0,end=n-1,i=0;
+
+        while(start<=end){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+class InverseArray2{
+    public static void main(String[] args) {
+        
+        int[] arr={13,42,44,11,34,42};
+        int n=arr.length;
+
+        int[] newArr=new int[n];
+        int index=0;
+
+        for(int i=n-1;i>=0;i--){
+            newArr[index++]=arr[i];
+        }
+
+        System.out.println(Arrays.toString(newArr));
     }
 }
