@@ -236,9 +236,13 @@ class OutputNumber2{
            int numbers=findNumber%10; 
     
         switch(numbers){
+            case 0:{
+                System.out.print("Zero ");
+                break;
+            }
             case 1:{
-            System.out.print("One ");
-            break;
+                System.out.print("One ");
+                break;
             }
             case 2:{
                 System.out.print("Two ");
