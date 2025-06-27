@@ -339,11 +339,12 @@ class SaveSubString {
         int rows = grid.length;
         int cols = grid[0].length;
 
-        for (int i=0;i<rows;i++) {
-            for (int j=0;j<cols;j++) {
-                if (j+target.length() <= cols) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                // Check horizontally (left to right)
+                if (j + target.length() <= cols) {
                     boolean found = true;
-                    for (int k=0; k<target.length();k++) {
+                    for (int k = 0; k < target.length(); k++) {
                         if (grid[i][j + k] != target.charAt(k)) {
                             found = false;
                             break;
@@ -355,7 +356,8 @@ class SaveSubString {
                     }
                 }
 
-                if (i+target.length() <= rows) {
+                // Check vertically (top to bottom)
+                if (i + target.length() <= rows) {
                     boolean found = true;
                     for (int k = 0; k < target.length(); k++) {
                         if (grid[i + k][j] != target.charAt(k)) {
@@ -374,10 +376,12 @@ class SaveSubString {
 
     public static void main(String[] args) {
         char[][] grid = {
-            {'W', 'E', 'L', 'C', 'O', 'M', 'E', 'T', 'O', 'Z', 'O', 'H', 'O', 'C', 'O', 'R', 'P', 'O', 'R', 'A', 'T', 'I', 'O', 'N'}
+            {'W','E','L','C','O','M','E','T','O','Z','O','H','O','C','O','R','P','O','R','A','T','I','O','N'},
+            {'T','O','O','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U'}
         };
 
         String target = "TOO";
         searchSubstring(grid, target);
     }
 }
+
